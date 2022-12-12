@@ -1,0 +1,23 @@
+{{#partial "contenido" }}
+<a class="btn btn-primary" href="/servicios/crear">Agregar Servicio</a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each servicios}}
+                <tr>
+                    <td>{{nombre}}</td>
+                    <td>
+                        <a class="btn btn-secondary" href="/servicios/{{id}}/editar">Editar</a>
+                        <a class="btn btn-secondary" href="/servicios/{{id}}/tareas">Ver tareas</a>
+                    </td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+{{/partial}}
+{{> base.hbs }}

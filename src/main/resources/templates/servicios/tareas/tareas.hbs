@@ -1,0 +1,24 @@
+{{#partial "contenido" }}
+<div>
+    Servicio: <h3>{{nombre_servicio}}</h3>
+</div>
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th>Nombre</th>
+			<th>Acciones</th>
+		</tr>
+	</thead>
+	<tbody>
+	    {{#each tareas}}
+	        <tr>
+                <td>{{descripcion}}</td>
+                <td>
+                    <button class="btn btn-primary">Eliminar</button>
+                </td>
+            </tr>
+	    {{/each}}
+	</tbody>
+</table>
+{{/partial}}
+{{> base.hbs }}
