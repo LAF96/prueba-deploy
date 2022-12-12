@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <h1>Registrarse como agente sectorial</h1>
+    </head>
+    <body>
+        <div>
+            <form method="POST" action="/registro/agente/registrar">
+                <div class="grid-item">
+		<div style="margin-bottom:1cm;">
+                <label>Nombre:</label>
+                <input name="nombre">
+                <label>Apellido:</label>
+                <input name="apellido">
+		</div>
+		<div style="margin-bottom:1cm;">
+		<label>Sector territorial:</label>
+		<button type="button" onclick="mostrarProvincias()">PROVINCIA</button>
+		<script>
+			function mostrarProvincias() {
+			document.getElementById("provincias").style.visibility="visible";
+			document.getElementById("municipios").style.visibility="hidden";
+			}
+		</script>
+		<button type="button" onclick="mostrarMunicipios()">MUNICIPIO</button>
+		<script>
+			function mostrarMunicipios() {
+			document.getElementById("provincias").style.visibility="hidden";
+			document.getElementById("municipios").style.visibility="visible";
+			}
+		</script>
+                <select id="provincias" name="provincia" style="visibility:hidden;">
+                    <option value="BUENOS_AIRES">Buenos aires</option>
+                    <option value="CABA">CABA</option>
+                    <option value="CATAMARCA">Catamarca</option>
+                    <option value="CHACO">Chaco</option>
+                    <option value="CHUBUT">Chubut</option>
+                    <option value="CORDOBA">Córdoba</option>
+                    <option value="CORRIENTES">Corrientes</option>
+                    <option value="ENTRE_RIOS">Entre Ríos</option>
+                    <option value="FORMOSA">Formosa</option>
+                    <option value="JUJUY">Jujuy</option>
+                    <option value="LA_PAMPA">La Pampa</option>
+                    <option value="LA_RIOJA">La Rioja</option>
+                    <option value="MENDOZA">Mendoza</option>
+                    <option value="MISIONES">Misiones</option>
+                    <option value="NEUQUEN">Neuquén</option>
+                    <option value="RIO_NEGRO">Río Negro</option>
+                    <option value="SALTA">Salta</option>
+                    <option value="SAN_JUAN">San Juan</option>
+                    <option value="SAN_LUIS">San Luis</option>
+                    <option value="SANTA_CRUZ">Santa Cruz</option>
+                    <option value="SANTA_FE">Santa Fe</option>
+                    <option value="SANTIAGO_DEL_ESTERO">Santiago del Estero</option>
+                    <option value="TIERRA_DEL_FUEGO">Tierra del Fuego</option>
+                    <option value="TUCUMAN">Tucumán</option>
+                </select>
+		<p>
+		<input id="municipios" name="provincia" style="visibility:hidden;">
+		</p>
+		</div>
+		<div style="margin-bottom:1cm;">
+                <label>Nombre de Usuario:</label>
+                <input name="nombre_usuario">
+                <label>Contraseña:</label>
+                <input name="contrasenia">
+		</div>
+                </div>
+                <div>
+                <button type="submit">REGISTRARME</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
